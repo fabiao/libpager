@@ -9,7 +9,7 @@ use std::cmp;
 use std::io::{self, Read, Write};
 
 /// Start the pager over some string.
-pub fn start<R, W>(stdin: R, mut stdout: W, title: &str, content: &str) -> io::Result<()>
+pub fn start<R, W>(stdin: R, stdout: W, title: &str, content: &str) -> io::Result<()>
     where R: Read,
           W: IntoRawMode {
     let line_count = content.lines().count();
